@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/default_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_control_height"
+        android:orientation="horizontal" >
+
+            <TextView
+                style="@style/TextCaptions"
+                android:id="@+id/rowTransDate"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:gravity="left"
+                android:text="01.01.2013"/>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.6"
+            android:layout_width="0dp" >
+
+            <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+            <ImageView style="@style/ImageInRow"
+                       android:id="@+id/rowImgTransPlus"
+                       android:scaleType="fitCenter"
+                       android:visibility="gone"
+                       android:layout_gravity="center"
+                       android:src="@drawable/add_green"/>
+
+            <ImageView style="@style/ImageInRow"
+                       android:id="@+id/rowImgTransMinus"
+                       android:layout_gravity="center"
+                       android:scaleType="fitCenter"
+                       android:src="@drawable/remove"/>
+
+            <TextView
+                    style="@style/TextCaptions"
+                    android:id="@+id/rowTransAmount"
+                    android:gravity="left"
+                    android:text="1000000.77"/>
+
+                <ImageView style="@style/ImageInRow"
+                           android:id="@+id/rowImgTransPhoto"
+                           android:layout_gravity="left|center_vertical"
+                           android:scaleType="fitCenter"
+                           android:layout_marginLeft="@dimen/default_padding"
+                           android:src="@drawable/camera"/>
+
+                <ImageView style="@style/ImageInRow"
+                           android:id="@+id/rowImgTransRemind"
+                           android:layout_gravity="left|center_vertical"
+                           android:scaleType="fitCenter"
+                           android:layout_marginLeft="@dimen/default_padding"
+                           android:src="@drawable/alert_red"/>
+            </LinearLayout>
+        </LinearLayout>
+       </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://habrahabr.ru/post/133503/
+< — &lt;
+& — &amp;
+' — \' или &apos;
+" — \" или &quot;
+-->
+
+<resources>
+    <string name="SQL_DeleteAccountsNA">
+        delete from accounts where active = 0 and not _id in (select id_acc from payords);
+    </string>
+
+    <string name="SQL_DeletePayordsNA">
+        delete from payords where active = 0 and not _id in (select id_payord from template where active = 1);
+    </string>
+
+    <string name="SQL_GetWithImage">
+        SELECT _id FROM transfer where active = 1 and not  imageName is null;
+    </string>
+
+
+    <string name="SQL_GetSaldoOnDate">
+        SELECT
+            (select sum(a1.saldo) from accounts a1 where  a._id = a1._id and a.active = a1.active)
+            +(select coalesce( sum(case p.type when 1 then  p.amount else 0 end ),0)
+            - coalesce( sum(case p.type when 0 then  p.amount else 0 end) ,0 ) as current_saldo
+            FROM   accounts a2,  payords p , transfer t
+            where a._id = a2._id and a.active = a2.active  and  a2._id = p.id_acc and a2.active = p.active
+            and  p._id  =  t.id_payord and p.active = t.active and  t.dt &lt;= ? )
+        FROM   accounts a
+        WHERE  a._id =? and a.active = 1;
+    </string>
+
+
+
+    <string name="SQL_GetAmountOnPeriod">
+        SELECT sum(p.amount) as amount
+        FROM   accounts a , payords p, transfer t
+        WHERE a._id =? and p.type = ? and (t.dt >= ? and t.dt &lt; ?)
+        and t.id_payord = p._id and p.id_acc = a._id
+        and a.active = 1 and p.active = 1 and t.active = 1;
+    </string>
+
+    <string name="SQL_GetActualTransferAlarms">
+        SELECT t._id , t.dt, p.time_remind
+        FROM  payords p, transfer t
+        WHERE p.remind = 1  and  t.dt >= ?
+        and t.id_payord = p._id  and  p.active = 1 and t.active = 1;
+    </string>
+
+
+    <string name="SQL_GetAmountByCategory">
+        SELECT sum(p.amount) as amount
+        FROM   accounts a , payords p, transfer t , category c
+        WHERE a._id =? and p.type = ? and (t.dt >= ? and t.dt &lt; ?) and c._id = ?
+        and t.id_payord = p._id and p.id_acc = a._id and p.id_cat = c._id
+        and a.active = 1 and p.active = 1 and t.active = 1;
+    </string>
+
+    <string name="SQL_GetSaldoOnDateAll">
+        SELECT  a.currency as currency,
+            (select sum(a1.saldo) from accounts a1 where a.currency = a1.currency and a.active = a1.active   )
+            +(select coalesce( sum(case p.type when 1 then  p.amount else 0 end ),0)
+            - coalesce( sum(case p.type when 0 then  p.amount else 0 end) ,0 ) as current_saldo
+            FROM   accounts a2,  payords p , transfer t
+            where a.currency = a2.currency and a.active = a2.active  and  a2._id = p.id_acc and a2.active = p.active
+            and  p._id  =  t.id_payord and p.active = t.active and  t.dt &lt;= ? )
+        FROM   accounts a
+        WHERE  a.active = 1
+        group by 1;
+    </string>
+
+    <string name="SQL_GetMinDt">
+        SELECT min(dt) as dt FROM transfer;
+    </string>
+    <string name="SQL_GetMaxDt">
+        SELECT max(dt) as dt FROM transfer;
+    </string>
+
+    <string name="SQL_GetPayordByDateInTransfer">
+    SELECT p.*
+    FROM   accounts a , payords p
+    WHERE a._id =? and p.type like ?
+    and p.id_acc = a._id  and a.active = 1 and p.active = 1
+    and p._id in (select id_payord from transfer t where (t.dt >= ? and t.dt &lt; ?) and t.active = 1);
+    </string>
+
+    <!--
+    переделать в разрезе валют
+    <string name="SQL_GetAmountOnPeriodAll">
+        SELECT sum(p.amount) as amount
+        FROM   accounts a , payords p, transfer t
+        WHERE  p.type = ? and (t.dt >= ? and dt < ?)
+        and t.id_payord = p._id and p.id_acc = a._id
+        and a.active = 1 and p.active = 1 and t.active = 1;
+    </string>
+     -->
+
+</resources>

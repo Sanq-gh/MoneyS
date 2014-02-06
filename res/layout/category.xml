@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+             android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/layCatProgress"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ExpandableListView
+            android:layout_height="0dip"
+            android:layout_width="match_parent"
+            android:id="@+id/lvCats"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:groupIndicator="@drawable/category_selector"
+            />
+
+    <View style="@style/Separator"/>
+    <View style="@style/SeparatorLineMenu"/>
+    <View style="@style/Separator"/>
+
+    <LinearLayout style="@style/LayoutFlatButton"
+                  android:id="@+id/layCatButttonFew">
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdCatNew"
+                android:drawableLeft="@drawable/category"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_new"
+                />
+
+        <View   style="@style/DeliverButtonVertical"
+                android:layout_centerHorizontal="true"
+                />
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdCatExpColl"
+                android:drawableLeft="@drawable/expand"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_expand"
+                />
+    </LinearLayout  >
+
+   <!--
+    <LinearLayout style="@style/LayoutFlatButton"
+                  android:id="@+id/layCatButtonOne"
+                  android:visibility="gone" >
+        <Button
+                style="@style/FlatButton"
+                android:id="@+id/cmdCatBack"
+                android:drawableLeft="@drawable/undo_black_s"
+                android:paddingLeft="70dp"
+                android:text="@string/btn_capt_back"
+
+                />
+    </LinearLayout  >
+       -->
+</LinearLayout  >

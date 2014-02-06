@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- todo: admob_publisher_id  real -->
+    <string name="admob_publisher_id">ca-app-pub-3444851569582544/9315152917</string>
+    <string name="app_name">MoneyS</string>
+    <string name="email">sanq.gm.moneys@gmail.com</string>
+    <string name="txt_pay_default_count_repeat">10</string>
+    <string name="mes_db_error">Error accessing DB:</string>
+    <string name="mes_sdcard_not_found">SD-Card not found!</string>
+
+</resources>

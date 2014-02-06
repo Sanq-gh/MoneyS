@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <ScrollView  android:id="@+id/scrollTransAcc"
+                 android:layout_height="0dip"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <View style="@style/Separator"/>
+
+
+            <TextView
+                    style="@style/defaultTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:text="@string/txt_capt_acc_trans_from"/>
+
+                  <Button  style="@style/FormButton"
+                         android:id="@+id/cmdTransAccFrom"
+                         android:drawableLeft="@drawable/visa"
+                         android:paddingLeft="@dimen/default_xx_padding"
+                         android:drawableRight="@drawable/more_right_green"
+                         android:paddingRight="@dimen/default_xx_padding"
+                         />
+
+            <View style="@style/SeparatorLineMenu"/>
+            <View style="@style/Separator"/>
+
+
+            <TextView
+                    style="@style/defaultTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:text="@string/txt_capt_acc_trans_to"/>
+
+            <Button  style="@style/FormButton"
+                     android:id="@+id/cmdTransAccTo"
+                     android:drawableLeft="@drawable/visa"
+                     android:paddingLeft="@dimen/default_xx_padding"
+                     android:drawableRight="@drawable/more_right_green"
+                     android:paddingRight="@dimen/default_xx_padding"
+                    />
+
+
+            <View style="@style/SeparatorLineMenu"/>
+            <View style="@style/Separator"/>
+
+            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_padding"
+                            android:orientation="vertical">
+
+            <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal">
+
+                <TextView
+                        style="@style/defaultTextView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/txt_capt_amount"/>
+                <TextView
+                        style="@style/defaultTextView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/txt_capt_pay_date"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" >
+
+
+                    <EditText
+                            style="@style/FormEditText"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/txtTransAccAmount"
+                            android:background="@drawable/rounded_edittext"
+                            android:gravity="center"
+                            android:typeface="normal"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:cursorVisible="false"
+                            android:textSize="@dimen/text_size_xlarge"
+                            android:layout_marginRight="@dimen/default_padding_half"/>
+
+                    <TextView
+                        style="@style/FormEditText"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:id="@+id/txtTransAccDt"
+                        android:gravity="center"
+                        android:text="01.01.2013"
+                        android:layout_marginLeft="@dimen/default_padding_half"
+                        />
+                </LinearLayout>
+
+                    <View style="@style/Separator"/>
+
+                    <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                        <Button  style="@style/FormButton"
+                                 android:layout_width="0dp"
+                                 android:layout_weight="1"
+                                 android:id="@+id/cmdTransAccCalc"
+                                 android:drawableLeft="@drawable/calc"
+                                 android:paddingLeft="@dimen/default_xx_padding"
+                                 android:text="@string/btn_capt_calculator"
+                                />
+
+                    </LinearLayout>
+
+
+                <TextView
+                        style="@style/defaultTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_capt_pay_name"/>
+
+
+                <EditText
+                        style="@style/FormEditText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/txtTransAccName"/>
+
+
+                <View style="@style/Separator"/>
+
+            </LinearLayout>
+
+
+            <View style="@style/Separator"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+
+                <Button
+                        style="@style/FormButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/cmdTransAccRepeat"
+                        android:drawableLeft="@drawable/calendar_white"
+                        android:paddingLeft="@dimen/default_xx_padding"
+                        android:text="@string/btn_capt_repeat"
+                        />
+
+
+                <Button
+                        style="@style/FormButton"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/cmdTransAccRemind"
+                        android:drawableLeft="@drawable/alert_white"
+                        android:paddingLeft="@dimen/default_xx_padding"
+                        android:text="@string/btn_capt_remind"
+                        />
+
+            </LinearLayout  >
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:padding="@dimen/default_padding"
+                          android:orientation="horizontal"
+                          android:weightSum="2">
+
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
+
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:id="@+id/layTransAccRepeat"
+                                  android:orientation="vertical"
+                                  android:visibility="gone">
+
+                        <View style="@style/Separator"/>
+                        <View style="@style/Separator"/>
+
+                        <TextView
+                            style="@style/defaultTextView"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:text="@string/txt_capt_pay_type_period"/>
+
+                        <View style="@style/Separator"/>
+
+                        <Spinner style="@style/Widget.MSpinner"
+                                 android:id="@+id/spinTransAccTypePeriod"
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="match_parent"/>
+
+                        <View style="@style/Separator"/>
+
+                        <TextView
+                                style="@style/defaultTextView"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:text="@string/txt_capt_pay_repeat_count"/>
+
+                        <View style="@style/Separator"/>
+
+                        <LinearLayout  android:layout_height="wrap_content"
+                                       android:layout_width="match_parent"
+                                       android:gravity="center_vertical">
+
+                            <ImageButton   style="@style/ImageButton"
+                                           android:id="@+id/imgTransAccRepCountMinus"
+                                           android:layout_width="0dp"
+                                           android:layout_weight="1"
+                                           android:src="@drawable/more_left_blue"/>
+
+
+                            <EditText style="@style/FormEditText"
+                                      android:id="@+id/txtTransAccRepeatCount"
+                                      android:layout_width="0dp"
+                                      android:layout_weight="1"
+                                      android:inputType="number"
+                                      android:gravity="center" />
+
+                            <ImageButton   style="@style/ImageButton"
+                                           android:id="@+id/imgTransAccRepCountPlus"
+                                           android:layout_width="0dp"
+                                           android:layout_weight="1"
+                                           android:src="@drawable/more_right_blue"/>
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout  >
+                </LinearLayout>
+
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:id="@+id/layTransAccRemind"
+                                  android:orientation="vertical"
+                                  android:visibility="gone">
+
+                        <TextView
+                                style="@style/defaultTextView"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:text="@string/txt_capt_pay_remind_time"/>
+
+                        <TextView
+                                style="@style/FormEditText"
+                                android:layout_width="match_parent"
+                                android:inputType="time"
+                                android:id="@+id/txtTransAccRemindTime"
+                                android:gravity="center"
+                                android:text="12:00"
+                                android:layout_marginLeft="@dimen/default_padding_half"/>
+                    </LinearLayout  >
+                </LinearLayout  >
+            </LinearLayout  >
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <View style="@style/Separator"/>
+    <View style="@style/SeparatorLineMenu"/>
+    <View style="@style/Separator"/>
+
+
+    <LinearLayout style="@style/LayoutFlatButton" >
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdTransAccSave"
+                android:drawableLeft="@drawable/accept"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_save"
+                />
+
+        <View   style="@style/DeliverButtonVertical"
+                android:id="@+id/viewPayListVerticalDeliver"
+                android:layout_centerHorizontal="true"
+                />
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdTransAccCancel"
+                android:drawableLeft="@drawable/exit_red"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_cancel"
+                />
+    </LinearLayout  >
+</LinearLayout  >

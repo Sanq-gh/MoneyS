@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+             android:orientation="vertical" >
+
+
+    <LinearLayout
+            style="@style/LayoutContext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+    <TextView   style="@style/defaultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_capt_acc_name"
+                />
+
+        <EditText  style="@style/FormEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAccAddName"
+                 />
+
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+        <TextView   style="@style/defaultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_capt_acc_currency"
+                />
+
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal">
+
+            <ImageView style = "@style/ImageInText"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:src="@drawable/currency"
+
+                    />
+
+        <Spinner
+                style="@style/Widget.MSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinAccAddCurrency"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/txt_capt_acc_currency"
+                />
+       </LinearLayout>
+
+
+        <View style="@style/Separator"/>
+        <View style="@style/SeparatorLineMenu"/>
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+        <TextView   style="@style/defaultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_capt_acc_start_balance"
+               />
+
+        <EditText
+                style="@style/FormEditText"
+                android:id="@+id/txtAccAddSaldo"
+                android:layout_width="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:inputType="numberDecimal"  />
+
+
+    </LinearLayout  >
+
+
+    <View style="@style/Separator"/>
+    <View style="@style/SeparatorLineMenu"/>
+    <View style="@style/Separator"/>
+
+
+    <LinearLayout style="@style/LayoutFlatButton" >
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdAccAddSave"
+                android:drawableLeft="@drawable/accept"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_save"
+                />
+
+        <View   style="@style/DeliverButtonVertical"
+                android:id="@+id/viewPayListVerticalDeliver"
+                android:layout_centerHorizontal="true"
+                />
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdAccAddCancel"
+                android:drawableLeft="@drawable/exit_red"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_cancel"
+                />
+
+
+    </LinearLayout  >
+
+</LinearLayout  >

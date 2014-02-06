@@ -1,0 +1,72 @@
+<resources>
+
+    <style name="TextCaptions">
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size_xxmedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextDescriptions">
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="TextMicro">
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:padding">@dimen/default_padding_third</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_xxsmall</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="NavigateMenuIcons">
+        <item name="android:layout_gravity">center|center_vertical</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:background">@null</item>
+
+    </style>
+
+    <style name="TableRow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:background">@drawable/btn_selectable_background</item>
+    </style>
+
+    <style name="SeparatorLineMenu">
+        <item name="android:layout_marginLeft">@dimen/default_padding</item>
+        <item name="android:layout_marginRight">@dimen/default_padding</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+    <style name="SeparatorLineMenuCaption">
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/dark_green</item>
+    </style>
+
+    <style name="LayoutContext">
+        <item name="android:background">@color/xxlight_blue</item>
+      <item name="android:padding">@dimen/default_padding</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+            android:id="@+id/ctxSet"
+            android:icon="@drawable/camera"
+            android:title="@string/txt_context_menu_set_photo"/>
+    <item
+            android:id="@+id/ctxView"
+            android:icon="@drawable/lens"
+            android:title="@string/txt_context_menu_view_photo"/>
+    <item
+            android:id="@+id/ctxClear"
+            android:icon="@drawable/exit_red"
+            android:title="@string/txt_context_menu_clear_photo"/>
+    <item
+            android:id="@+id/ctxCancel"
+            android:icon="@drawable/undo"
+            android:title="@string/txt_context_menu_cancel"/>
+</menu>

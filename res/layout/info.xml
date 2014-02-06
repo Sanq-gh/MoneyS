@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <View style="@style/Separator"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            style="@style/ImageInCaption"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/_app_icon"
+            />
+
+        <TextView
+            style="@style/TextCaptions"
+            android:layout_marginLeft="@dimen/default_x_padding"
+            android:text="@string/app_name"/>
+
+
+        <TextView
+            style="@style/TextCaptions"
+            android:id="@+id/txtInfoVersionName"/>
+    </LinearLayout>
+
+    <View style="@style/Separator"/>
+
+    <View style="@style/Separator"/>
+
+    <View style="@style/SeparatorLineMenu"/>
+
+    <View style="@style/Separator"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollPrefs"
+        android:layout_height="0dip"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextDescriptions"
+                android:textStyle="bold"
+                android:textColor="@color/xdark_blue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:text="@string/txt_info_app_data"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_xxx_padding"
+                android:orientation="horizontal">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/TextDescriptions"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/txt_info_db_path"/>
+
+
+                        <TextView
+                            style="@style/TextDescriptions"
+                            android:id="@+id/txtInfoDbName"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="test db name path"
+                            android:layout_weight="1"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content">
+
+                        <TextView
+                            style="@style/TextDescriptions"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/txt_info_images_path"/>
+
+                        <TextView
+                            style="@style/TextDescriptions"
+                            android:id="@+id/txtInfoImagesPath"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:layout_weight="1"
+                            android:text="test image path"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/TextDescriptions"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/txt_info_backup_path"/>
+
+                        <TextView
+                            style="@style/TextDescriptions"
+                            android:id="@+id/txtInfoBackupsPath"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:layout_weight="1"
+                            android:text="test backup path"/>
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+
+
+            <View style="@style/Separator"/>
+
+            <TextView
+                style="@style/TextDescriptions"
+                android:textStyle="bold"
+                android:textColor="@color/xdark_blue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:text="@string/contact_us"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_xxx_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextDescriptions"
+                    android:autoLink="email"
+                    android:linksClickable="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/email"/>
+            </LinearLayout>
+
+
+
+
+            <View style="@style/Separator"/>
+
+            <TextView
+                style="@style/TextDescriptions"
+                android:textStyle="bold"
+                android:textColor="@color/xdark_blue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:text="@string/txt_info_version_history"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_xxx_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextDescriptions"
+                    android:id="@+id/txtInfoVersionHistory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:singleLine="false"
+                    android:text="1.0 test version history"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        style="@style/ImageInCaption"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/check_density"/>
+
+</LinearLayout>

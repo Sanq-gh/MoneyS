@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingLeft="@dimen/default_padding"
+              android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextDescriptions"
+                android:padding="1dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_xmedium"
+                android:id="@+id/rowPayListPayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="left"
+                android:text="Name"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextDescriptions"
+                android:id="@+id/rowPayListDt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="01.01.2013"
+                android:textColor="@color/xdark_blue"
+                />
+
+            <View style="@style/DeliverSpaceVertical"/>
+
+            <TextView
+                style="@style/TextMicro"
+                android:id="@+id/rowPayListPayCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="left"
+                android:text="Category brhntntn"
+                android:textColor="@color/xdark_blue"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="0.4">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/ImageInRow"
+                android:id="@+id/rowImgPayListPlus"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add_green"/>
+
+
+            <ImageView
+                style="@style/ImageInRow"
+                android:id="@+id/rowImgPayListMinus"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:src="@drawable/remove"/>
+
+            <TextView
+                style="@style/TextCaptions"
+                android:paddingLeft="@dimen/default_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:id="@+id/rowPayListSaldo"
+
+                android:text="88.77"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/ImageInRow"
+                android:id="@+id/rowImgPayListRemind"
+                android:scaleType="fitCenter"
+                android:src="@drawable/alert_blue"/>
+
+            <ImageView
+                style="@style/ImageInRow"
+                android:id="@+id/rowImgPayListRepeat"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calendar"/>
+
+            <ImageView
+                style="@style/ImageInCaption"
+                android:id="@+id/rowImgPayListMore"
+                android:layout_width="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/more_right_blue"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

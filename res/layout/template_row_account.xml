@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_padding" >
+
+    <LinearLayout
+            android:id="@+id/layRowAccCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true">
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layRowAccSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <TextView
+                style="@style/TextCaptions"
+                android:id="@+id/rowAccSaldo"
+                android:text="999999.99"/>
+
+        <TextView
+                style="@style/TextCaptions"
+                android:id="@+id/rowAccCurrency"
+                android:text="RRR"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layRowAccMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/layRowAccCurrency"
+            android:layout_toLeftOf="@id/layRowAccSaldo"
+            android:orientation="vertical">
+
+        <TextView
+                style="@style/TextCaptions"
+                android:id="@+id/rowAccName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account name"
+                android:singleLine="true"
+                />
+
+        <TextView
+                style="@style/TextDescriptions"
+                android:id="@+id/rowAccDescript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                 android:text="Account start saldo: "
+                 android:singleLine="true"
+
+            />
+    </LinearLayout>
+</RelativeLayout>

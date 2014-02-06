@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/ctxSelect"
+            android:icon="@drawable/accept"
+            android:title="@string/txt_context_menu_select"/>
+    <item
+            android:id="@+id/ctxCancel"
+            android:icon="@drawable/undo"
+            android:title="@string/txt_context_menu_cancel"/>
+</menu>

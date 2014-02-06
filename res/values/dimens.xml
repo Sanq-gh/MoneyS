@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="widget_margin">8dp</dimen>
+
+    <integer name="seek_backup_max_value">10</integer>
+    <dimen name="category_indicator_size">12dp</dimen>
+
+    <dimen name="default_button_height">60dp</dimen>
+
+     <dimen name="text_size_small">5dp</dimen>
+     <dimen name="text_size_xsmall">7.5dp</dimen>
+     <dimen name="text_size_xxsmall">10dp</dimen>
+     <dimen name="text_size_medium">12.5dp</dimen>
+     <dimen name="text_size_xmedium">15dp</dimen>
+     <dimen name="text_size_xxmedium">17.5dp</dimen>
+     <dimen name="text_size_large">20dp</dimen>
+     <dimen name="text_size_xlarge">25dp</dimen>
+     <dimen name="text_size_xxlarge">30dp</dimen>
+
+    <dimen name="default_xx_height">100dp</dimen>
+    <dimen name="default_x_height">75dp</dimen>
+    <dimen name="default_height">45dp</dimen>
+
+    <dimen name="default_control_x_height">80dp</dimen>
+    <dimen name="default_control_height">40dp</dimen>
+    <dimen name="default_control_height_half">20dp</dimen>
+    <dimen name="default_control_height_thid">15dp</dimen>
+    <dimen name="default_control_height_quot">10dp</dimen>
+
+    <dimen name="default_padding_third">1dp</dimen>
+    <dimen name="default_padding_half">1.5dp</dimen>
+    <dimen name="default_padding">3dp</dimen>
+    <dimen name="default_x_padding">6dp</dimen>
+    <dimen name="default_xx_padding">12dp</dimen>
+    <dimen name="default_xxx_padding">24dp</dimen>
+
+    <dimen name="actionbar_home_width">60dp</dimen>
+
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="calc_dialog_button_height">60dp</dimen>
+    <dimen name="calc_dialog_button_width">60dp</dimen>
+
+    <integer name="num_cols">1</integer>
+</resources>

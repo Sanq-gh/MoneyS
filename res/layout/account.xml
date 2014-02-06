@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/LayoutFlatButton"
+        android:weightSum="10">
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:id="@+id/cmdAccDtLeft"
+            android:paddingLeft="@dimen/default_xxx_padding"
+            android:drawableLeft="@drawable/left_arrow"
+            />
+
+
+        <View
+            style="@style/DeliverButtonVertical"
+            android:layout_height="match_parent"/>
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:inputType="date"
+            android:id="@+id/cmdAccDt"
+            android:gravity="center_vertical|center"
+            android:text="01.01.2013"
+            android:layout_weight="4"/>
+
+
+        <View
+            style="@style/DeliverButtonVertical"
+            android:layout_height="match_parent"/>
+
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:id="@+id/cmdAccDtRight"
+            android:paddingRight="@dimen/default_xxx_padding"
+            android:drawableRight="@drawable/right_arrow"
+            />
+
+    </LinearLayout>
+
+    <View style="@style/Separator"/>
+
+    <View style="@style/SeparatorLineMenu"/>
+
+    <View style="@style/Separator"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/layAccProgress"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/lvAccount"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layAccTotalSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View style="@style/Separator"/>
+        <View style="@style/SeparatorLineMenu"/>
+
+
+        <TextView
+            style="@style/TextCaptions"
+            android:id="@+id/txtAccTotalSaldo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textStyle="bold"
+            android:textColor="@color/xdark_blue"
+            android:text="USD: 840 "/>
+    </LinearLayout>
+
+
+    <View style="@style/Separator"/>
+
+    <View style="@style/SeparatorLineMenu"/>
+
+    <View style="@style/Separator"/>
+
+    <LinearLayout
+        style="@style/LayoutFlatButton"
+        android:id="@+id/layAccButttonFew">
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cmdAccNew"
+            android:drawableLeft="@drawable/visa"
+            android:paddingLeft="@dimen/default_xx_padding"
+            android:text="@string/btn_capt_new"
+            />
+
+        <View
+            style="@style/DeliverButtonVertical"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cmdAccTransfer"
+            android:drawableLeft="@drawable/transfer"
+            android:paddingLeft="@dimen/default_xx_padding"
+            android:text="@string/btn_capt_acc_transfer"
+            />
+    </LinearLayout>
+
+    <!--
+     <LinearLayout style="@style/LayoutFlatButton"
+                   android:id="@+id/layAccButtonOne"
+                   android:visibility="gone" >
+         <Button
+                 style="@style/FlatButton"
+                 android:id="@+id/cmdAccBack"
+                 android:drawableLeft="@drawable/undo_black_s"
+                 android:paddingLeft="@dimen/default_xx_padding"
+                 android:text="@string/btn_capt_cancel_and_back"
+
+                 />
+     </LinearLayout  >
+       -->
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:id="@+id/layTest"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+
+    <TextView style="@style/TextCaptions"
+              android:id="@+id/txtTestHi"
+              android:text="Test layout ..."/>
+
+    <Button
+        android:id="@+id/cmdTestOther"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Other" />
+
+    <Button
+        android:id="@+id/cmdTestThrowException"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Throw Exception" />
+
+
+    <Button
+            android:id="@+id/cmdTestCreateAlarmAll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Create all alarms" />
+
+    <Button
+        android:id="@+id/cmdTestCancelAlarmAll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel all alarms" />
+
+
+
+    <Button
+        android:id="@+id/cmdTestTestCheckAlarms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Check alarms" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+    <TextView
+        android:id="@+id/txtTestCheckAlarms"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="alarms ..." />
+
+    </ScrollView>
+
+</LinearLayout>

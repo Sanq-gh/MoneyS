@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:weightSum="12" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/calc_dialog_display"
+            android:textSize="@dimen/text_size_xlarge"
+            android:editable="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button  android:id="@+id/calc_enter_total"
+                 style="@style/CalcButton"
+                 android:text="@string/calc_dialog_enter_total_button"
+                 android:textColor="@color/xdark_green"
+                 android:layout_weight="9" />
+
+        <Button android:id="@+id/calc_all_clear"
+                style="@style/CalcButton"
+                android:text="AC"
+                android:textColor="@color/red"
+                android:layout_weight="3"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_seven"
+                android:text="7"/>
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_eight"
+                android:text="8"/>
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_nine"
+                android:text="9"/>
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_division"
+                android:text="/"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_four"
+                android:text="4"/>
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_five"
+                android:text="5"/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_six"
+                android:text="6"/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_multiply"
+                android:text="x"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_one"
+                android:text="1" />
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_two"
+                android:text="2"/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_three"
+                android:text="3"/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_subtract"
+                android:text="-" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_decimal"
+                android:text="."/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_zero"
+                android:text="0"/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_equals"
+                android:text="="/>
+        <Button style="@style/CalcButton"
+                android:id="@+id/calc_addition"
+                android:text="+"/>
+    </LinearLayout>
+
+</LinearLayout>

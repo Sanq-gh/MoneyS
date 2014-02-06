@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+             android:orientation="vertical" >
+
+    <View style="@style/Separator"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/layTemplProgress"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ListView
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:id="@+id/lvTemplate"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            />
+
+    <View style="@style/Separator"/>
+    <View style="@style/SeparatorLineMenu"/>
+    <View style="@style/Separator"/>
+
+    <!--
+    <LinearLayout style="@style/LayoutFlatButton"
+                  android:id="@+id/layAccButtonOne">
+        <Button
+                style="@style/FlatButton"
+                android:id="@+id/cmdTemplBack"
+                android:drawableLeft="@drawable/undo_black_s"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_cancel_and_back"
+
+                />
+    </LinearLayout  >
+        -->
+
+</LinearLayout  >

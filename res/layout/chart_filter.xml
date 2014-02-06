@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+             android:orientation="vertical" >
+
+    <ScrollView  android:id="@+id/scrollPay"
+                 android:layout_height="0dip"
+                 android:layout_width="match_parent"
+                 android:layout_weight="1">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/default_padding"
+                  android:orientation="vertical">
+
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal"
+                      android:weightSum="9">
+
+            <Button
+                    style="@style/FlatButton"
+                    android:layout_width="match_parent"
+                    android:inputType="date"
+                    android:id="@+id/cmdChartFilterDtFrom"
+                    android:gravity="center"
+                    android:text="01.01.2013"
+                    android:layout_weight="3"/>
+
+            <View   style="@style/DeliverButtonVertical"
+                    android:layout_height="match_parent"/>
+
+            <Button
+                    style="@style/FlatButton"
+                    android:layout_width="match_parent"
+                    android:id="@+id/cmdChartFilterPeriod"
+                    android:gravity="center"
+                    android:text="test period"
+                    android:layout_weight="3"
+                    />
+
+            <View   style="@style/DeliverButtonVertical"
+                    android:layout_height="match_parent"/>
+
+            <Button
+                    style="@style/FlatButton"
+                    android:layout_width="match_parent"
+                    android:inputType="date"
+                    android:id="@+id/cmdChartFilterDtTo"
+                    android:gravity="center"
+                    android:text="01.01.2013"
+                    android:layout_weight="3"/>
+
+        </LinearLayout>
+
+
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal">
+
+            <ImageView style = "@style/ImageInText"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:src="@drawable/chart"
+
+                    />
+        <Spinner   style="@style/Widget.MSpinner"
+                   android:id="@+id/spinChartFilterTypeChart"
+                  android:layout_width="match_parent"/>
+        </LinearLayout>
+
+        <View style="@style/SeparatorLineMenu"/>
+        <View style="@style/Separator"/>
+
+        <TextView
+            style="@style/defaultTextView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/txtChartFilterDescChart"
+            android:gravity="center"
+            android:text="Test chart description"/>
+
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+
+
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="match_parent"
+                      android:id="@+id/layChartFilterPayType"
+                       android:orientation="vertical">
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal">
+
+            <ImageView style = "@style/ImageInText"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:id="@+id/imgChartFilterPayType"
+                       android:src="@drawable/pay_type_white"
+                />
+
+            <Spinner   style="@style/Widget.MSpinner"
+                       android:id="@+id/spinChartFilterPayType"
+                       android:layout_width="match_parent"/>
+        </LinearLayout>
+
+        <View style="@style/SeparatorLineMenu"/>
+        <View style="@style/Separator"/>
+
+
+        <TextView
+            style="@style/defaultTextView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/txt_capt_pay_type"/>
+        </LinearLayout>
+
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="match_parent"
+                      android:id="@+id/layChartFilterAcc"
+                      android:orientation="vertical">
+
+
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal">
+
+       <ImageView style = "@style/ImageInText"
+               android:id="@+id/imgChartFilterAcc"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/visa"
+               />
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/layChartProgressAcc"
+                android:visibility="gone">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        <Spinner   style="@style/Widget.MSpinner"
+                   android:visibility="visible"
+                   android:id="@+id/spinChartFilterAcc"
+                   android:layout_width="match_parent"/>
+        </LinearLayout>
+
+        <View style="@style/SeparatorLineMenu"/>
+        <View style="@style/Separator"/>
+
+        <TextView
+                style="@style/defaultTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="@string/txt_capt_acc"/>
+
+        </LinearLayout>
+
+        <View style="@style/Separator"/>
+        <View style="@style/Separator"/>
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="match_parent"
+                      android:id="@+id/layChartFilterCurrency"
+                      android:orientation="vertical">
+
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal">
+
+            <ImageView style = "@style/ImageInText"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:id="@+id/imgChartFilterCurrency"
+                       android:src="@drawable/currency"
+                    />
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/layChartProgressCurrensy"
+                android:visibility="gone">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        <Spinner   style="@style/Widget.MSpinner"
+                   android:visibility="visible"
+                   android:id="@+id/spinChartFilterCurrency"
+                   android:layout_width="match_parent"/>
+        </LinearLayout>
+
+        <View style="@style/SeparatorLineMenu"/>
+        <View style="@style/Separator"/>
+        <TextView
+                style="@style/defaultTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="@string/txt_capt_curr"/>
+        <View style="@style/Separator"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="match_parent"
+                      android:id="@+id/layChartFilterPeriodType"
+                      android:orientation="vertical">
+
+
+        <LinearLayout style="@style/LayoutFlatButton"
+                      android:orientation="horizontal">
+
+            <ImageView style = "@style/ImageInText"
+                       android:id="@+id/imgChartFilterPeriodType"
+                       android:layout_height="wrap_content"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:src="@drawable/date_interval"
+
+                    />
+        <Spinner  style="@style/Widget.MSpinner"
+                  android:id="@+id/spinChartFilterTypePeriod"
+                  android:layout_width="match_parent"
+                  android:gravity="center" />
+        </LinearLayout>
+
+        <View style="@style/SeparatorLineMenu"/>
+        <View style="@style/Separator"/>
+        <TextView
+                style="@style/defaultTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="@string/txt_capt_interval_period"/>
+        <View style="@style/Separator"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_height="0dip"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+    <View style="@style/Separator"/>
+    <View style="@style/SeparatorLineMenu"/>
+    <View style="@style/Separator"/>
+
+
+    <LinearLayout style="@style/LayoutFlatButton" >
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdChartFilterView"
+                 android:drawableLeft="@drawable/chart"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_view"
+                />
+
+        <View   style="@style/DeliverButtonVertical"
+                android:id="@+id/viewPayListVerticalDeliver"
+                android:layout_centerHorizontal="true"
+                />
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdChartFilterBack"
+                android:drawableLeft="@drawable/undo"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_back"
+                />
+
+
+    </LinearLayout  >
+
+
+</LinearLayout  >

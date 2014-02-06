@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View style="@style/Separator"/>
+
+        <LinearLayout
+            style="@style/LayoutFlatButton"
+            android:orientation="horizontal"
+            android:weightSum="9">
+
+            <Button
+                style="@style/FlatButton"
+                android:layout_width="match_parent"
+                android:inputType="date"
+                android:id="@+id/cmdPaylistDtFrom"
+                android:gravity="center"
+                android:text="01.01.2013"
+                android:layout_weight="3"/>
+
+            <View
+                style="@style/DeliverButtonVertical"
+                android:layout_height="match_parent"/>
+
+            <Button
+                style="@style/FlatButton"
+                android:layout_width="match_parent"
+                android:id="@+id/cmdPaylistPeriod"
+                android:gravity="center"
+                android:text="test per"
+                android:layout_weight="3"/>
+
+            <View
+                style="@style/DeliverButtonVertical"
+                android:layout_height="match_parent"/>
+
+            <Button
+                style="@style/FlatButton"
+                android:layout_width="match_parent"
+                android:inputType="date"
+                android:id="@+id/cmdPaylistDtTo"
+                android:gravity="center"
+                android:text="01.01.2013"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                style="@style/Widget.MSpinner"
+                android:id="@+id/spinPaylistTypePay"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.35"
+                />
+
+
+            <Button
+                style="@style/FormButton"
+                android:layout_width="0dp"
+                android:layout_weight="0.65"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmdPaylistAcc"
+                android:drawableRight="@drawable/more_right_green"
+                android:paddingRight="@dimen/default_padding"
+                android:drawableLeft="@drawable/visa"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="Test name acc"
+
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/Separator"/>
+
+    <View style="@style/SeparatorLineMenu"/>
+
+    <View style="@style/Separator"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/layPaylistProgress"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:visibility="visible"
+        android:layout_height="0dip"
+        android:layout_width="match_parent"
+        android:id="@+id/lvPaylist"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        />
+
+
+    <View style="@style/Separator"/>
+
+    <View style="@style/SeparatorLineMenu"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextDescriptions"
+        android:padding="@dimen/default_padding_third"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/txt_capt_paylist__bottom_insaldo"/>
+
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:text="@string/txt_capt_paylist__bottom_outgo"/>
+
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/dark_green"
+            android:text="@string/txt_capt_paylist__bottom_income"/>
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/txt_capt_paylist__bottom_outsaldo"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/layPaylistProgressSaldo"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layPaylistSaldo"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/txtPaylistTotalInSaldo"
+            android:text="100000.55"/>
+
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/txtPaylistTotalIn"
+            android:textColor="@color/red"
+            android:text="-100000.55"/>
+
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/txtPaylistTotalOut"
+            android:textColor="@color/dark_green"
+            android:text="+100000.55"/>
+
+        <TextView
+            style="@style/TextDescriptions"
+            android:padding="@dimen/default_padding_third"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/txtPaylistTotalOutSaldo"
+            android:text="100000.55"/>
+    </LinearLayout>
+
+<!--
+    <LinearLayout style="@style/LayoutFlatButton">
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cmdPayListNew"
+            android:drawableLeft="@drawable/transact_s"
+            android:paddingLeft="@dimen/default_xx_padding"
+            android:text="@string/btn_capt_new"
+            />
+
+        <View
+            style="@style/DeliverButtonVertical"
+            android:id="@+id/viewPayListVerticalDeliver"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            style="@style/FlatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cmdPayListBack"
+            android:drawableLeft="@drawable/undo_black_s"
+            android:paddingLeft="@dimen/default_xx_padding"
+            android:text="@string/btn_capt_back"
+            />
+
+
+    </LinearLayout>
+    -->
+
+</LinearLayout>

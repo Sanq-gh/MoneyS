@@ -1,0 +1,241 @@
+<resources>
+
+
+
+<style name="Widget.MWidget" parent="android:Widget.Button.Inset">
+
+    <item name="android:background">@drawable/widget_back</item>
+
+    </style>
+
+
+<style name="Widget.MSpinner" parent="android:Widget">
+        <item name="android:background">@drawable/mspinner</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/default_padding</item>
+        <item name="android:layout_marginRight">@dimen/default_padding</item>
+        <item name="android:layout_height">@dimen/default_control_height</item>
+    </style>
+
+    <style name="Separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/default_padding</item>
+    </style>
+
+    <style name="ListTextViewGroup" >
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:height">@dimen/default_height</item>
+        <item name="android:paddingLeft">@dimen/default_padding</item>
+        <item name="android:textSize">@dimen/text_size_xmedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ListTextViewChild" parent="ListTextViewGroup"  >
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingLeft">@dimen/default_height</item>
+    </style>
+
+    <style name="ListTextViewSingle"  parent="ListTextViewGroup">
+        <item name="android:paddingLeft">@dimen/default_padding</item>
+
+    </style>
+
+
+    <style name="defaultTextView">
+      <item name="android:textSize">@dimen/text_size_xmedium</item>
+        <item name="android:textColor">@color/xdark_blue</item>
+    </style>
+
+
+   <style name="defaultEditText" >
+       <item name="android:height">@dimen/default_control_height</item>
+       <item name="android:textSize">@dimen/text_size_xmedium</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:textColor">@color/black</item>
+       <item name="android:paddingLeft">@dimen/default_padding</item>
+       <item name="android:background">@drawable/back_edit_text</item>
+    </style>
+
+    <style name="FormEditText" >
+        <item name="android:height">@dimen/default_control_height</item>
+        <item name="android:layout_height">@dimen/default_control_height</item>
+        <item name="android:textSize">@dimen/text_size_xmedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/rounded_edittext</item>
+
+    </style>
+
+
+    <style name="defaultRadio">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="defaultCheck">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="defaultSpin">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:height">@dimen/default_height</item>
+        <item name="android:layout_height">@dimen/default_height</item>
+
+    </style>
+
+    <style name="DeliverButtonVertical">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">4dip</item>
+        <item name="android:layout_marginTop">4dip</item>
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+
+    <style name="DeliverSpaceVertical">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">0dp</item>
+
+    </style>
+
+
+
+
+
+
+    <style name="DeliverButtonHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:layout_marginLeft">4dip</item>
+        <item name="android:layout_marginRight">4dip</item>
+        <item name="android:background">@color/light_gray</item>
+
+    </style>
+
+<!--    -->
+    <style name="FlatButton"  >
+        <item name="android:height">@dimen/default_control_height</item>
+        <item name="android:textSize">@dimen/text_size_xxmedium</item>
+        <item name="android:textColor">@color/xdark_blue</item>
+        <item name="android:textStyle">bold</item>
+    <!--
+
+    <item name="android:typeface">serif</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        -->
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/btn_selectable_background</item>
+    </style>
+
+    <style name="FormButton"  >
+        <item name="android:height">@dimen/default_control_height</item>
+        <item name="android:textSize">@dimen/text_size_xmedium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/btn_selectable_background</item>
+    </style>
+
+
+
+
+    <style name="LayoutFlatButton">
+           <item name="android:layout_width">match_parent</item>
+           <item name="android:layout_height">@dimen/default_control_height</item>
+          <item name="android:layout_alignParentBottom">true</item>
+       <!--  <item name="android:background">@color/xdark_green</item>-->
+    </style>
+
+    <style name="ImageInText">
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_width">@dimen/default_control_height</item>
+        <item name="android:layout_height">@dimen/default_control_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+    <!--    <item name="android:layout_alignParentEnd">true</item>-->
+    </style>
+
+    <style name="ImageInRow">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">@dimen/default_control_height_thid</item>
+        <item name="android:maxWidth">@dimen/default_control_height_thid</item>
+    </style>
+
+    <style name="ImageInCaption">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxHeight">@dimen/default_control_height</item>
+        <item name="android:maxWidth">@dimen/default_control_height</item>
+    </style>
+
+
+    <style name="ImageButton">
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxHeight">@dimen/default_control_height</item>
+        <item name="android:maxWidth">@dimen/default_control_height</item>
+        <item name="android:background">@drawable/btn_selectable_background</item>
+
+    </style>
+
+
+    <style name="ButtonText">
+        <item name="android:layout_width">34dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle"></item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="CalcButton">
+        <!-- <item name="android:textStyle">bold</item>-->
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:layout_height">@dimen/calc_dialog_button_height</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">1dp</item>
+
+    </style>
+
+    <style name="CheckInRow">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+
+</resources>

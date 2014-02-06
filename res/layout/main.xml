@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/lay_main"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="@color/xxlight_blue">
+
+    <TextView style="@style/TextCaptions"
+        android:id="@+id/txtTestHi"
+        android:text="Content layout ..."/>
+</LinearLayout>

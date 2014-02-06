@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/nav_frame"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+<LinearLayout
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="left|center_vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 2 columns -->
+
+            <TableRow
+                style="@style/TableRow">
+                <TextView style="@style/TextCaptions"
+                          android:text="@string/app_name"/>
+            </TableRow>
+
+            <View style="@style/SeparatorLineMenu"/>
+
+
+            <TableRow
+                    style="@style/TableRow"
+                    android:id="@+id/row_accounts">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/visa"/>
+
+
+                <LinearLayout android:orientation="vertical">
+                    <TextView style="@style/TextCaptions"
+
+
+                              android:text="@string/menu_capt_accounts"/>
+
+                    <TextView style="@style/TextDescriptions"
+                              android:text="@string/menu_description_accounts" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow  android:id="@+id/row_payords"
+                       style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/transact"/>
+                <LinearLayout
+                        android:orientation="vertical">
+
+                    <TextView style="@style/TextCaptions"
+                              android:text="@string/menu_capt_payords"/>
+
+                    <TextView style="@style/TextDescriptions"
+                              android:text="@string/menu_description_payords" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row_pay"
+                style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/add_blue"/>
+
+                <LinearLayout android:orientation="vertical">
+
+                    <TextView style="@style/TextCaptions"
+                              android:text="@string/menu_capt_pay" />
+                    <!--
+                                       <TextView style="@style/TextDescriptions"
+                                              android:text="@string/menu_description_pay" />-->
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                    style="@style/TableRow"
+                    android:id="@+id/row_transfer">
+
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/transfer"/>
+
+
+                <LinearLayout android:orientation="vertical">
+                    <TextView style="@style/TextCaptions"
+                              android:text="@string/menu_capt_transfer"/>
+                    <TextView style="@style/TextDescriptions"
+                              android:text="@string/menu_description_transfer" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <View style="@style/SeparatorLineMenu"/>
+
+            <TableRow  android:id="@+id/row_charts"
+                       style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/chart"/>
+
+                <TextView style="@style/TextCaptions"
+                          android:text="@string/menu_capt_charts"/>
+            </TableRow>
+
+
+            <TableRow  android:id="@+id/row_category"
+                       style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/category"/>
+
+                <TextView style="@style/TextCaptions"
+                          android:text="@string/menu_capt_category"/>
+            </TableRow>
+
+            <TableRow  android:id="@+id/row_templates"
+                       style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/puzzle"/>
+                <LinearLayout
+                        android:orientation="vertical">
+
+                    <TextView style="@style/TextCaptions"
+                              android:text="@string/menu_capt_templates"/>
+
+                    <TextView style="@style/TextDescriptions"
+                              android:text="@string/menu_description_templates" />
+                </LinearLayout>
+
+            </TableRow>
+
+
+
+            <View style="@style/SeparatorLineMenu"/>
+
+
+            <TableRow  android:id="@+id/row_prefs"
+                style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                    android:src="@drawable/settings"/>
+
+                <TextView style="@style/TextCaptions"
+                   android:text="@string/menu_capt_prefs"/>
+            </TableRow>
+
+
+            <TableRow  android:id="@+id/row_info"
+                style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                    android:src="@drawable/info"/>
+
+                <TextView style="@style/TextCaptions"
+                   android:text="@string/menu_capt_info"/>
+            </TableRow>
+
+
+            <View style="@style/SeparatorLineMenu"/>
+
+
+
+            <TableRow  android:id="@+id/row_test"
+                       android:visibility="gone"
+                       style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/accept"/>
+
+                <TextView style="@style/TextCaptions"
+                          android:text="@string/menu_capt_test"/>
+                <View style="@style/SeparatorLineMenu"/>
+            </TableRow>
+
+
+
+            <TableRow  android:id="@+id/row_exit"
+                       style="@style/TableRow">
+
+                <ImageView  style="@style/NavigateMenuIcons"
+                            android:src="@drawable/exit_red"/>
+
+                <TextView style="@style/TextCaptions"
+                          android:text="@string/menu_capt_exit"/>
+            </TableRow>
+
+
+            <View style="@style/SeparatorLineMenu"/>
+            <!--
+                       3 columns
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:text="Column 1"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:text="Column 2"
+                    android:layout_column="1"/>
+
+             </TableRow>
+
+            display this button in 3rd column via layout_column(zero based)
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_column="2"
+                    android:text="Column 3" />
+            </TableRow>
+
+           display this button in 2nd column via layout_column(zero based)
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_column="2"
+                    android:text="Column 2" />
+            </TableRow>
+
+
+           edittext span 2 column
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_span="2"
+                    android:text="Column 1 &amp; 2" />
+            </TableRow>
+            -->
+        </TableLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+</FrameLayout>

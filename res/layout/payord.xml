@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <ScrollView  android:id="@+id/scrollPay"
+ android:layout_height="0dip"
+ android:layout_width="match_parent"
+ android:layout_weight="1">
+
+
+ <LinearLayout android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+     <View style="@style/Separator"/>
+
+
+
+         <Button  style="@style/FormButton"
+                  android:id="@+id/cmdPayTemplate"
+                  android:drawableLeft="@drawable/puzzle"
+                  android:paddingLeft="@dimen/default_xx_padding"
+                  android:drawableRight="@drawable/more_right_green"
+                  android:paddingRight="@dimen/default_xx_padding"
+                  android:text="@string/btn_capt_pay_template"
+                 />
+
+
+     <View style="@style/SeparatorLineMenu"/>
+
+           <Button  style="@style/FormButton"
+                  android:id="@+id/cmdPayAcc"
+                  android:drawableLeft="@drawable/visa"
+                  android:paddingLeft="@dimen/default_xx_padding"
+                  android:drawableRight="@drawable/more_right_green"
+                  android:paddingRight="@dimen/default_xx_padding"
+                  />
+
+
+
+     <View style="@style/SeparatorLineMenu"/>
+
+     <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:padding="@dimen/default_padding"
+                     android:orientation="vertical">
+
+     <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+         <TextView
+                 style="@style/defaultTextView"
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:gravity="center"
+                 android:text="@string/txt_capt_amount"/>
+         <TextView
+                 style="@style/defaultTextView"
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:text="@string/txt_capt_pay_date"
+                 android:gravity="center"/>
+         </LinearLayout>
+
+
+         <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal" >
+
+
+             <EditText
+                     style="@style/FormEditText"
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:id="@+id/txtPayAmount"
+                     android:background="@drawable/rounded_edittext"
+                     android:gravity="center"
+                     android:typeface="normal"
+                     android:clickable="false"
+                     android:focusable="false"
+                     android:cursorVisible="false"
+                     android:textSize="@dimen/text_size_xlarge"
+                     android:layout_marginRight="@dimen/default_padding_half"/>
+
+             <TextView
+                 style="@style/FormEditText"
+                 android:layout_height="match_parent"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="date"
+                 android:id="@+id/txtPayDt"
+                 android:gravity="center"
+                 android:text="01.01.2013"
+                 android:layout_marginLeft="@dimen/default_padding_half"
+                 />
+         </LinearLayout>
+
+             <View style="@style/Separator"/>
+
+             <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                 <Button  style="@style/FormButton"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:id="@+id/cmdPayCalc"
+                          android:drawableLeft="@drawable/calc"
+                          android:paddingLeft="@dimen/default_xx_padding"
+                          android:text="@string/btn_capt_calculator"
+                         />
+
+                 <LinearLayout
+                         android:layout_height="match_parent"
+                         android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:gravity="center_vertical"
+                         android:orientation="horizontal">
+
+                 <ImageButton   style="@style/ImageButton"
+                              android:id="@+id/imgPayTypeCredit"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:src="@drawable/add_green"/>
+
+                 <ImageButton   style="@style/ImageButton"
+                              android:id="@+id/imgPayTypeDebit"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:src="@drawable/remove_white"/>
+
+             </LinearLayout>
+             </LinearLayout>
+
+
+         <TextView
+                 style="@style/defaultTextView"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/txt_capt_pay_name"/>
+
+
+         <EditText
+                 style="@style/FormEditText"
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:id="@+id/txtPayName"/>
+
+
+         <View style="@style/Separator"/>
+         <View style="@style/Separator"/>
+
+         <TextView
+                 style="@style/defaultTextView"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/txt_capt_pay_cat"/>
+
+
+         <Button  style="@style/FormButton"
+                  android:id="@+id/cmdPayCat"
+                  android:drawableLeft="@drawable/category"
+                  android:paddingLeft="@dimen/default_xx_padding"
+                  android:drawableRight="@drawable/more_right_green"
+                  android:paddingRight="@dimen/default_xx_padding"
+                 />
+
+         <View style="@style/SeparatorLineMenu"/>
+
+
+     </LinearLayout>
+
+
+            <View style="@style/Separator"/>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:orientation="horizontal">
+
+                            <Button
+                                    style="@style/FormButton"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/cmdPayRepeat"
+                                    android:drawableLeft="@drawable/calendar_white"
+                                    android:paddingLeft="@dimen/default_xx_padding"
+                                    android:text="@string/btn_capt_repeat"
+                                    />
+
+
+                            <Button
+                                    style="@style/FormButton"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/cmdPayRemind"
+                                android:drawableLeft="@drawable/alert_white"
+                                    android:paddingLeft="@dimen/default_xx_padding"
+                                    android:text="@string/btn_capt_remind"
+                                    />
+
+                        </LinearLayout  >
+
+
+
+     <LinearLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="@dimen/default_padding"
+                   android:orientation="horizontal"
+                   android:weightSum="2">
+
+
+     <LinearLayout android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+         <LinearLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/layPayRepeat"
+                       android:orientation="vertical"
+                       android:visibility="gone">
+
+             <TextView
+                 style="@style/defaultTextView"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:layout_width="match_parent"
+                 android:text="@string/txt_capt_pay_type_period"/>
+
+             <Spinner style="@style/Widget.MSpinner"
+                      android:id="@+id/spinPayTypePeriod"
+                      android:layout_height="wrap_content"
+                      android:layout_width="match_parent"/>
+
+             <View style="@style/Separator"/>
+             <View style="@style/Separator"/>
+
+
+         <TextView
+             style="@style/defaultTextView"
+             android:gravity="center"
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:text="@string/txt_capt_pay_repeat_count"/>
+
+             <View style="@style/Separator"/>
+
+             <LinearLayout  android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical">
+
+             <ImageButton   style="@style/ImageButton"
+                            android:id="@+id/imgPayRepCountMinus"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/more_left_blue"/>
+
+
+             <EditText style="@style/FormEditText"
+                       android:id="@+id/txtPayRepeatCount"
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:inputType="number"
+                       android:gravity="center" />
+
+             <ImageButton   style="@style/ImageButton"
+                            android:id="@+id/imgPayRepCountPlus"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/more_right_blue"/>
+
+         </LinearLayout>
+
+
+
+
+     </LinearLayout>
+ </LinearLayout>
+
+
+  <LinearLayout android:layout_width="match_parent"
+                       android:layout_weight="1"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+     <LinearLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/layPayRemind"
+                   android:orientation="vertical"
+                   android:visibility="gone">
+
+         <TextView
+             style="@style/defaultTextView"
+             android:gravity="center"
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:text="@string/txt_capt_pay_remind_time"/>
+
+         <View style="@style/Separator"/>
+
+         <TextView
+             style="@style/FormEditText"
+             android:layout_width="match_parent"
+             android:inputType="time"
+             android:id="@+id/txtPayRemindTime"
+             android:gravity="center"
+             android:text="12:00"
+             android:layout_marginLeft="@dimen/default_padding_half"/>
+
+     </LinearLayout  >
+     </LinearLayout  >
+     </LinearLayout  >
+
+
+            <View style="@style/Separator"/>
+
+                <Button  style="@style/FormButton"
+                        android:layout_width="match_parent"
+                        android:id="@+id/cmdPaySaveAsTempl"
+                        android:drawableLeft="@drawable/puzzle_white"
+                        android:paddingLeft="@dimen/default_xx_padding"
+                        android:text="@string/bnt_capt_save_as_templdate"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View style="@style/Separator"/>
+    <View style="@style/SeparatorLineMenu"/>
+    <View style="@style/Separator"/>
+
+
+    <LinearLayout style="@style/LayoutFlatButton" >
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdPaySave"
+                android:drawableLeft="@drawable/accept"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_save"
+                />
+
+        <View   style="@style/DeliverButtonVertical"
+                android:id="@+id/viewPayListVerticalDeliver"
+                android:layout_centerHorizontal="true"
+                />
+
+        <Button
+                style="@style/FlatButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/cmdPayCancel"
+                android:drawableLeft="@drawable/exit_red"
+                android:paddingLeft="@dimen/default_xx_padding"
+                android:text="@string/btn_capt_cancel"
+                />
+
+
+    </LinearLayout  >
+
+</LinearLayout  >

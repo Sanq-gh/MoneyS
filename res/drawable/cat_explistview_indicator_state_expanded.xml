@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/category_indicator_size"
+        android:top="@dimen/category_indicator_size"
+        android:right="@dimen/category_indicator_size"
+        android:bottom="@dimen/category_indicator_size"
+
+        android:drawable="@drawable/more_down_green">
+    </item>
+</layer-list>
+

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="mes_cat_empty_name">Пожалуйста, укажите название категории</string>
+    <string name="title_cat_fragment">Категории</string>
+    <string name="title_cat_activity_add">Редиктирование категорий</string>
+
+    <string name="mes_confirm_delete">Подтвердите удаление "%s" </string>
+    <string name="mes_confirm_restore">Восстановить данные из "%s" ?</string>
+
+    <string name="mes_confirm_exit">Выйти?</string>
+    <string name="title_pay_faragment">Создание тразакции</string>
+    <string name="mes_pay_invalid_account">Не выбран счет</string>
+    <string name="mes_pay_error_save">Произошла ошибка во время создания транзакции</string>
+    <string name="title_acc_fragment">Счета</string>
+    <string name="title_acc_activity_add">Редактирование счета</string>
+    <string name="title_template_fragment">Шаблоны</string>
+    <string name="title_transfer_fragment">Запланированные тразакции</string>
+    <string name="title_paylist_faragment">Транзакции</string>
+    <string name="title_prefs_fragment">Настройки</string>
+    <string name="title_info_fragment">Инфо</string>
+    <string name="title_transacc_fragment">Перевод</string>
+    <string name="mes_confirm_clear_photo">Очистить фото?</string>
+    <string name="mes_acc_empty_name">Название счета не можеть быть пустым</string>
+    <string name="mes_trans_not_selected">Пожалуйста, выберите транзакцию</string>
+    <string name="mes_trans_err_camera">Ошибка камеры!</string>
+    <string name="mes_trans_err_save_photo">Ошибка сохранения изображения</string>
+    <string name="mes_trans_photo_not_set">Изображение не задано</string>
+    <string name="default_account_name">Кредитная карта</string>
+    <string name="mes_pay_invalid_repeat_count">Неправильное количество повторений</string>
+    <string name="mes_pay_invalid_amount">Неправильная сумма</string>
+    <string name="txt_capt_acc_trans_from">Исходный счет</string>
+    <string name="txt_capt_acc_trans_to">Целевой счет</string>
+    <string name="mes_illegal_trans_acc">Перевод между счетами с разными валютами невозможен</string>
+    <string name="mes_transacc_invalid_account">Выбран неправильный счет</string>
+    <string name="txt_transacc_save_ok">Перевод создан успешно</string>
+    <string name="mes_notify_pay_not_found">Не найдена запланированная транзакция(возможно она была удалена)</string>
+    <string name="mes_backup_create_successfully">Резервная копия создана успешно: "%s"</string>
+    <string name="mes_backup_create_fail">Ошибка резервного копирования!</string>
+    <string name="mes_db_restore_successfully">База данных успешно восстановлена!</string>
+    <string name="mes_db_restore_fail">Ошибка восстановления базы данных:</string>
+    <string name="mes_backup_schedule_error">Ошибка при выполнении резервного копирования: </string>
+    <string name="mes_template_created_successfully">Шаблон успешно создан</string>
+    <string name="mes_trans_err_view_photo">Файл изображения "%s" не найден! Ссылка будет очищена.</string>
+    <string name="mes_wrong_time_format">Неправильный формат времени</string>
+
+    <!-- UI ==================================================================================== -->
+    <!-- UI ==================================================================================== -->
+    <!-- UI ==================================================================================== -->
+
+    <string name="menu_capt_transfer">Перевод</string>
+    <string name="menu_description_transfer">Перевод средств между счетами</string>
+    <string name="menu_capt_pay">Новая тразакция</string>
+    <string name="menu_capt_payords">Транзакции</string>
+    <string name="menu_capt_templates">Шаблоны</string>
+    <string name="menu_description_templates">Управление шаблонами транзакций</string>
+
+    <string name="menu_capt_charts">Диаграммы</string>
+    <string name="menu_capt_category">Категории</string>
+    <string name="menu_capt_prefs">Настройки</string>
+    <string name="menu_capt_info">Инфо</string>
+
+    <!-- context menu ===================================================-->
+    <string name="txt_context_menu_new">\u0020 Создать</string>
+    <string name="txt_context_menu_clone">\u0020 Копировать</string>
+    <string name="txt_context_menu_select">\u0020 Выбрать</string>
+    <string name="txt_context_menu_edit">\u0020 Редактировать</string>
+    <string name="txt_context_menu_acc_new_pay">\u0020 Новая транзакция</string>
+    <string name="txt_context_menu_acc_new_transfer">\u0020 Новый перевод</string>
+    <string name="txt_context_menu_del">\u0020 Удалить</string>
+    <string name="txt_context_menu_create_pay">\u0020 Новая транзакция</string>
+    <string name="txt_context_menu_clear_photo">\u0020 Очистить фото</string>
+    <string name="txt_context_menu_view_photo">\u0020 Просмотр фото</string>
+    <string name="txt_context_menu_set_photo">\u0020 Установить фото</string>
+    <string name="txt_context_menu_add_to_templates">\u0020 В шаблон</string>
+
+
+    <string name="responsive_ui">Responsive UI</string>
+    <string name="what_is_this">What is this?</string>
+    <string name="responsive_explanation">This is an example of a UI that responds well to device type. On phones, the menu will be placed inside a SlidingMenu, while on tablets the menu will be exposed alongside the content because we have enough room to always show it.</string>
+
+
+    <string name="btn_capt_new">Создать</string>
+    <string name="btn_capt_expand">Разв-ть</string>
+    <string name="btn_capt_collapse">Свернуть</string>
+
+    <string name="btn_capt_save">Сохранить</string>
+    <string name="btn_capt_cancel">Отмена</string>
+    <string name="txt_capt_cat_name">Имя категории</string>
+    <string name="txt_capt_cat_parent">(родительская категория, для групповой - оставте пустой)</string>
+    <string name="txt_capt_pay_date">Дата начала</string>
+    <string name="txt_capt_pay_name">Описание</string>
+    <string name="txt_capt_amount">Сумма</string>
+    <string name="txt_capt_pay_type">(тип транзакции)</string>
+    <string name="title_test_activity">Тест</string>
+    <string name="menu_capt_test">Тест</string>
+    <string name="txt_capt_pay_cat">Категория</string>
+    <string name="btn_capt_repeat">Повторить</string>
+    <string name="txt_capt_pay_type_period">Повторять каждый:</string>
+    <string name="txt_capt_pay_repeat_count">Количество:</string>
+    <string name="btn_capt_remind">Напомнить</string>
+    <string name="btn_capt_back">Назад</string>
+    <string name="mes_pay_invalid_category">Неправильня категория</string>
+    <string name="btn_capt_acc_transfer">Перевод</string>
+    <string name="txt_capt_acc_name">Название счета</string>
+    <string name="txt_capt_acc_start_balance">Начальный остаток</string>
+    <string name="txt_capt_acc_currency">Валюта</string>
+    <string name="row_acc_descript">Нач.ост.:</string>
+    <string name="calc_dialog_enter_total_button">Ввод</string>
+    <string name="btn_capt_calculator">Кальк.</string>
+    <string name="btn_capt_pay_template">Выбрать с шаблона</string>
+    <string name="bnt_capt_save_as_templdate">Сохранить как шаблон</string>
+    <string name="txt_context_menu_cancel">\u0020 Отмена</string>
+    <string name="txt_context_menu_view_repeat">\u0020 Запланированные</string>
+    <string name="menu_description_payords">Просмотр или редактирование транзакциий</string>
+    <string name="menu_capt_accounts">Счета</string>
+    <string name="menu_description_accounts">Управление счетами</string>
+    <string name="title_dialog_template_period">Выберите период</string>
+    <string name="menu_capt_exit">Выход</string>
+    <string name="menu_capt_close">Закрыть</string>
+    <string name="title_nav_faragment">Навигация</string>
+    <string name="txt_capt_pay_remind_time">Время</string>
+    <string name="title_chart_view_fragment">Диаграммы</string>
+    <string name="title_chart_balanse">Баланс</string>
+    <string name="title_chart_balance_desc">Баланс счета(ов) за период</string>
+    <string name="title_chart_debit">Расход</string>
+    <string name="title_chart_credit">Доход</string>
+    <string name="txt_capt_acc">(укажите конкретный счет)</string>
+    <string name="txt_capt_curr">(или укажите валюту)</string>
+    <string name="btn_capt_view">Просмотр</string>
+    <string name="title_chart_filter_fragment">Параметры диаграммы</string>
+
+
+    <string name="txt_capt_interval_period">(интервал)</string>
+    <string name="title_chart_balance">Балансовый</string>
+    <string name="title_chart_summary">Итоговый</string>
+    <string name="title_chart_summary_desc">Доходы и расходы за период</string>
+    <string name="title_chart_x_caption">Время</string>
+    <string name="title_chart_y_caption">Деньги</string>
+    <string name="title_chart_category">По категориям</string>
+    <string name="title_chart_category_desc">С группировкой по родительским категориям</string>
+    <string name="name_pay_type_undefined">Неопр.</string>
+
+
+    <!-- Spinners =================================== -->
+    <string name="name_pay_type_debit">Расход</string>
+    <string name="name_pay_type_credit">Доход</string>
+
+    <string name="name_period_type_day">День</string>
+    <string name="name_period_type_week">Неделя</string>
+    <string name="name_period_type_month">Месяц</string>
+    <string name="name_period_type_quart">Квартал</string>
+    <string name="name_period_type_year">Год</string>
+
+    <string name="name_period_report_type_today">Сегодня</string>
+    <string name="name_period_report_type_this_week">Тек. неделя</string>
+    <string name="name_period_report_type_this_month">Тек. месяц</string>
+    <string name="name_period_report_type_this_year">Тек. год</string>
+    <string name="name_period_report_type_next_week">Сл. неделя</string>
+    <string name="name_period_report_type_next_month">Сл. месяц</string>
+    <string name="name_period_report_type_next_year">Сл. год</string>
+    <string name="name_period_report_type_prev_week">Пр. неделя</string>
+    <string name="name_period_report_type_prev_month">Пр. месяц</string>
+    <string name="name_period_report_type_prev_year">Пр. год</string>
+    <string name="name_period_report_type_all_time">Все время</string>
+    <!-- Spinners =================================== -->
+    <string name="txt_prefs_time">Время напоминания</string>
+    <string name="txt_prefs_menu_orientation">Ориентация меню(нужен перезапуск)</string>
+    <string name="txt_prefs_compression">Уровень сжатия изображений</string>
+    <string name="name_slide_orient_left">Слева</string>
+    <string name="name_slide_orient_right">Справа</string>
+    <string name="name_period_report_type_custom">Произвольный</string>
+    <string name="txt_prefs_defaults">Параметры по-умолчанию</string>
+    <string name="txt_prefs_interface">Интерфейс</string>
+    <string name="txt_prefs_backup">Резервное копирование</string>
+    <string name="txt_prefs_backup_count">Макс количество копий</string>
+    <string name="btn_capt_backup_schedule">Планировщик :</string>
+    <string name="txt_prefs_backup_time">Время:</string>
+    <string name="txt_prefs_backup_interval">Выполнять каждый(ую):</string>
+    <string name="btn_capt_backup_now">Создать копию</string>
+    <string name="btn_capt_restore">Востановить БД из копии</string>
+    <string name="btn_capt_backup_clear">Сжатие БД</string>
+    <string name="mes_db_clearing">Очистка таблиц ...</string>
+    <string name="mes_db_backup">Резервирование...</string>
+    <string name="mes_db_vacuum">Vacuum ...</string>
+    <string name="mes_confirm_clear">Выполнить сжатие БД?</string>
+    <string name="mes_db_clear_info">Позволяет  уменьшить размера файла данных и оптимизировать структуру БД.</string>
+    <string name="mes_db_clear_successfully">Сжатие выполнено успешно</string>
+    <string name="mes_db_clear_fail">Ошибка при выполении сжатия:</string>
+    <string name="mes_pay_tray_saving">Сохранение ...</string>
+    <string name="mes_deleting">Удаление ...</string>
+    <string name="ok">OK</string>
+    <string name="saved_successfully">Сохранение выполнено успешно</string>
+    <string name="row_txt_file_time">Время:</string>
+    <string name="row_txt_file_date">Дата:</string>
+    <string name="mes_error_occurs">Произошла ошибка:</string>
+    <string name="mes_delete_images">Очистка изображений...</string>
+
+    <string name="txt_capt_paylist__bottom_insaldo">вх.ост</string>
+    <string name="txt_capt_paylist__bottom_outgo">расход</string>
+    <string name="txt_capt_paylist__bottom_income">доход</string>
+    <string name="txt_capt_paylist__bottom_outsaldo">исх.ост</string>
+    <string name="mes_acc_acc_transfer_not_edit">Редактирование переводов не реализовано. Пожалуйста, удалите и создайте новый.</string>
+    <string name="txt_info_app_data">Данные приложения</string>
+    <string name="txt_info_db_path">БД:</string>
+    <string name="txt_info_images_path">Изображения:</string>
+    <string name="txt_info_backup_path">Резерв:</string>
+    <string name="txt_info_version_history">История версий</string>
+    <string name="contact_us">Обратная связь</string>
+
+
+</resources>

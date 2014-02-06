@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LayoutContext"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollPrefs"
+        android:layout_height="0dip"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextCaptions"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:text="@string/txt_prefs_defaults"/>
+
+            <View style="@style/SeparatorLineMenuCaption"/>
+
+            <View style="@style/Separator"/>
+
+            <View style="@style/Separator"/>
+
+            <View style="@style/Separator"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_xxx_padding"
+                android:orientation="vertical">
+                <!--
+                     <TextView
+                         style="@style/defaultTextView"
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="left"
+                         android:text="@string/txt_prefs_default_acc"/>
+                -->
+
+                <LinearLayout
+                    style="@style/LayoutFlatButton"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ImageInText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/visa"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/layPrefsProgressAcc"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <Spinner
+                        style="@style/Widget.MSpinner"
+                        android:visibility="visible"
+                        android:id="@+id/spinPrefsDefAcc"
+                        android:layout_width="match_parent"/>
+                </LinearLayout>
+
+                <View style="@style/SeparatorLineMenu"/>
+
+                <View style="@style/Separator"/>
+
+
+                <!--
+                    <TextView
+                            style="@style/defaultTextView"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:gravity="left"
+                            android:text="@string/txt_prefs_default_period"/>
+              -->
+
+                <LinearLayout
+                    style="@style/LayoutFlatButton"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ImageInText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/calendar"
+                        />
+
+                    <Spinner
+                        style="@style/Widget.MSpinner"
+                        android:id="@+id/spinPrefsDefPeriod"
+                        android:layout_width="match_parent"/>
+                </LinearLayout>
+
+                <View style="@style/SeparatorLineMenu"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+
+                <TextView
+                    style="@style/defaultTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:text="@string/txt_prefs_time"/>
+
+                <View style="@style/Separator"/>
+
+                <TextView
+                    style="@style/FormEditText"
+                    android:layout_width="match_parent"
+                    android:inputType="time"
+                    android:id="@+id/txtPrefsDefTime"
+                    android:gravity="center"
+                    android:text="12:00"
+                    android:layout_marginLeft="@dimen/default_padding_half"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextCaptions"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:text="@string/txt_prefs_interface"/>
+
+            <View style="@style/SeparatorLineMenuCaption"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_xxx_padding"
+                android:orientation="vertical">
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+
+                <TextView
+                    style="@style/defaultTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:text="@string/txt_prefs_menu_orientation"/>
+
+                <LinearLayout
+                    style="@style/LayoutFlatButton"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ImageInText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_menu_green"
+                        />
+
+                    <Spinner
+                        style="@style/Widget.MSpinner"
+                        android:id="@+id/spinPrefsMenuOrient"
+                        android:layout_width="match_parent"/>
+                </LinearLayout>
+
+                <View style="@style/SeparatorLineMenu"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/defaultTextView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/txt_prefs_compression"/>
+
+
+                    <TextView
+                        style="@style/defaultTextView"
+                        android:id="@+id/txtPrefsCompressValue"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textStyle="bold"
+                        android:text="100%"/>
+                </LinearLayout>
+
+                <View style="@style/Separator"/>
+
+
+                <SeekBar
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/default_x_padding"
+                    android:layout_marginRight="@dimen/default_x_padding"
+                    android:id="@+id/seekPrefsCompress"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/TextCaptions"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:text="@string/txt_prefs_backup"/>
+
+            <View style="@style/SeparatorLineMenuCaption"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_xxx_padding"
+                android:orientation="vertical">
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+
+                <Button
+                    style="@style/FormButton"
+                    android:layout_width="match_parent"
+                    android:id="@+id/cmdPrefsBackup"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="@dimen/default_xxx_padding"
+                    android:drawableLeft="@drawable/db_backup"
+                    android:text="@string/btn_capt_backup_now"/>
+
+
+                <View style="@style/Separator"/>
+
+                <View style="@style/Separator"/>
+
+                <Button
+                    style="@style/FormButton"
+                    android:layout_width="match_parent"
+                    android:id="@+id/cmdPrefsRestore"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="@dimen/default_xxx_padding"
+                    android:drawableLeft="@drawable/db_restore"
+                    android:text="@string/btn_capt_restore"/>
+
+                <View style="@style/Separator"/>
+                <View style="@style/Separator"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                    style="@style/FormButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:id="@+id/cmdPrefsDbClear"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="@dimen/default_xxx_padding"
+                    android:drawableLeft="@drawable/db_clear"
+                    android:text="@string/btn_capt_backup_clear"/>
+
+                    <ImageView
+                        android:id="@+id/imgPrefsDbClearInfo"
+                        style="@style/ImageInText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/info"
+                        />
+                </LinearLayout>
+
+                <View style="@style/Separator"/>
+                <View style="@style/Separator"/>
+
+                <Button
+                    style="@style/FormButton"
+                    android:layout_width="match_parent"
+                    android:id="@+id/cmdPrefsBackupSchedule"
+                    android:gravity="left|center_vertical"
+                    android:drawablePadding="@dimen/default_xxx_padding"
+                    android:drawableLeft="@drawable/db_white"
+                    android:text="@string/btn_capt_backup_schedule"/>
+
+                <View style="@style/Separator"/>
+                <View style="@style/Separator"/>
+
+                <LinearLayout
+                    android:background="@drawable/rounded_layout"
+
+                    android:padding="@dimen/default_xx_padding"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/layPrefsBackupSchedule"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/defaultTextView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:text="@string/txt_prefs_backup_interval"/>
+
+
+                    <LinearLayout
+                        style="@style/LayoutFlatButton"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/ImageInText"
+                            android:id="@+id/imgChartFilterPeriodType"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/date_interval"
+
+                            />
+
+                        <Spinner
+                            style="@style/Widget.MSpinner"
+                            android:id="@+id/spinPrefsBackupScheduleInterval"
+                            android:layout_width="match_parent"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <View style="@style/SeparatorLineMenu"/>
+
+                    <View style="@style/Separator"/>
+
+                    <TextView
+                        style="@style/defaultTextView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:text="@string/txt_prefs_backup_time"/>
+
+                    <View style="@style/Separator"/>
+
+                    <TextView
+                        style="@style/FormEditText"
+                        android:layout_width="match_parent"
+                        android:inputType="time"
+                        android:id="@+id/txtPrefsBackupScheduleTime"
+                        android:gravity="center"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/default_padding_half"/>
+
+
+                    <View style="@style/Separator"/>
+
+                    <View style="@style/Separator"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/defaultTextView"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="@string/txt_prefs_backup_count"/>
+
+
+                        <TextView
+                            style="@style/defaultTextView"
+                            android:id="@+id/txtPrefsBackupScheduleCnt"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textStyle="bold"
+                            android:text="10"/>
+                    </LinearLayout>
+
+                    <View style="@style/Separator"/>
+
+
+                    <SeekBar
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:max="@integer/seek_backup_max_value"
+                        android:id="@+id/seekPrefsBackupScheduleCnt"/>
+
+                </LinearLayout>   <!-- android:id="@+id/layPrefsBackupSchedule" -->
+
+                 <View style="@style/Separator"/>
+                <View style="@style/Separator"/>
+
+
+            </LinearLayout>
+            <View style="@style/SeparatorLineMenuCaption"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

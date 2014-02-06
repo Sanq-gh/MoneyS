@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/ctxEdit"
+            android:icon="@drawable/category_edit"
+            android:title="@string/txt_context_menu_edit"/>
+    <item
+            android:id="@+id/ctxDelete"
+            android:icon="@drawable/exit_red"
+            android:title="@string/txt_context_menu_del"/>
+    <item
+            android:id="@+id/ctxCancel"
+            android:icon="@drawable/undo"
+            android:title="@string/txt_context_menu_cancel"/>
+</menu>
