@@ -26,7 +26,6 @@ public class ChartDataTest extends AndroidTestCase {
         DataChart chrData = new DataChart(this.getContext());
         Account acc = new Preferences(getContext()).getDefaultAcc();
 
-
        Map<Date, Double> serData  = chrData.getBalance(acc, new DatePeriod("01.10.2013", "16.10.2013", "dd.MM.yyyy"), Period.Type.DAY);
         for (Map.Entry el : serData.entrySet()) {
             SLog.d(el.getKey().toString() + "  " + el.getValue().toString());
