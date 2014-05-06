@@ -16,14 +16,14 @@
 
 package android.support.v4.app;
 
-import java.util.ArrayList;
-
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * Implementation of {@link android.support.v4.view.PagerAdapter} that

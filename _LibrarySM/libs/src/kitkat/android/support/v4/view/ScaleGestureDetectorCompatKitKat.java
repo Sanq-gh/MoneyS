@@ -17,8 +17,6 @@
 package android.support.v4.view;
 
 import android.view.ScaleGestureDetector;
-import android.view.MotionEvent;
-import android.content.Context;
 
 /**
  * Implementation of ScaleGestureDetector compatibility that can call KitKat APIs. This class is an

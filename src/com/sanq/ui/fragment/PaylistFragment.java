@@ -47,7 +47,7 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
     private final int RESULT_PARAM_ID_SALDO = 1;
 
     PaylistAdapter mAdapter;
-    PaylistFilterParams filterParams;
+    public PaylistFilterParams filterParams;
 
     ListView listView;
     ViewGroup layProgressPaylist;
@@ -72,6 +72,7 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
 
     CallbackFragment callbackFragment;
 
+
     @Override
     protected String getHeadCaption() {
         return context.getResources().getString(R.string.title_paylist_faragment);
@@ -86,9 +87,11 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAdapter = new PaylistAdapter(context);
-        Preferences prefs = new Preferences(context);
-        filterParams = new FilterParams();
-        filterParams.initParams(prefs.getDefaultAcc(), Period.calcSelectDateRange(context, prefs.getDefaultTypeReportPeriod()), Payord.Type.UNDEFINED);
+        if (filterParams == null) {
+            filterParams = new FilterParams();
+            Preferences prefs = new Preferences(context);
+            filterParams.initParams(prefs.getDefaultAcc(), Period.calcSelectDateRange(context, prefs.getDefaultTypeReportPeriod()), Payord.Type.UNDEFINED);
+        }
     }
 
 
@@ -132,7 +135,6 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
 
 //        cmdNew = (Button) v.findViewById(R.id.cmdPayListNew);
 //        cmdNew.setOnClickListener(this);
-//
 //        cmdBack = (Button) v.findViewById(R.id.cmdPayListBack);
 //        cmdBack.setOnClickListener(this);
 
@@ -152,7 +154,6 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
 //            case R.id.cmdPayListNew:
 //                callbackFragment.onFragmentEvent(R.string.title_acc_fragment, filterParams.getAccount());
 //                MainSlidingMenu.getInstance().switchContent(new PayordFragment());
-//
 //                break;
 //            case R.id.cmdPayListBack:
 //                getActivity().getSupportFragmentManager().popBackStack();
@@ -269,14 +270,14 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
         // super.onCreateContextMenu(menu, v, menuInfo);
         // getActivity().getMenuInflater().inflate(idContextMenu, menu);
         IconContextMenu cm = new IconContextMenu(getActivity(), R.menu.context_paylist);
-        cm.setOnIconContextItemSelectedListener(iconMenuiListener);
+        cm.setOnIconContextItemSelectedListener(iconMenuListener);
         cm.setInfo(((AdapterView.AdapterContextMenuInfo) menuInfo).position);
         cm.show();
 
     }
 
 
-    IconContextMenu.IconContextItemSelectedListener iconMenuiListener = new IconContextMenu.IconContextItemSelectedListener() {
+    IconContextMenu.IconContextItemSelectedListener iconMenuListener = new IconContextMenu.IconContextItemSelectedListener() {
         @Override
         public void onIconContextItemSelected(MenuItem item, Object info) {
             Payord clickedPay = mAdapter.getPayord((Integer) info);
@@ -301,7 +302,7 @@ public class PaylistFragment extends AbstractFragment implements View.OnClickLis
                         fragment.setArguments(args);
                         MainSlidingMenu.getInstance().switchContent(fragment);
                     } else {
-                        Utils.showMessage(getActivity(),"", context.getString(R.string.mes_acc_acc_transfer_not_edit), null);
+                        Utils.showMessage(getActivity(), "", context.getString(R.string.mes_acc_acc_transfer_not_edit), null);
                     }
                     break;
                 case R.id.ctxDelete:

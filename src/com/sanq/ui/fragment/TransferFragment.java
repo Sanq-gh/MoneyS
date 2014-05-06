@@ -196,12 +196,12 @@ public class TransferFragment extends AbstractFragment implements View.OnClickLi
 
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         IconContextMenu cm = new IconContextMenu(getActivity(), R.menu.context_transfer);
-        cm.setOnIconContextItemSelectedListener(iconMenuiListener);
+        cm.setOnIconContextItemSelectedListener(iconMenuListener);
         cm.setInfo(((AdapterView.AdapterContextMenuInfo) menuInfo).position);
         cm.show();
     }
 
-    IconContextMenu.IconContextItemSelectedListener iconMenuiListener = new IconContextMenu.IconContextItemSelectedListener() {
+    IconContextMenu.IconContextItemSelectedListener iconMenuListener = new IconContextMenu.IconContextItemSelectedListener() {
         @Override
         public void onIconContextItemSelected(MenuItem item, Object info) {
             //    Transfer clickedTrans = mAdapter.getTransfer((Integer)info);
@@ -352,9 +352,7 @@ public class TransferFragment extends AbstractFragment implements View.OnClickLi
                     fos.flush();
                     compresStream.close();
                     fos.close();
-
                     deleteOrigImage(lastCapturedPhotoId);
-
                     filterParams.getTransfer().setImageName(String.valueOf(mAdapter.getSelectedTransfer().getId()));
                     new TransferDAO(context).update(filterParams.getTransfer());
                 } catch (IOException e) {

@@ -20,6 +20,7 @@ import android.test.AndroidTestCase;
 
 import java.util.Locale;
 
+
 /** @hide */
 public class BidiFormatterTest extends AndroidTestCase {
 

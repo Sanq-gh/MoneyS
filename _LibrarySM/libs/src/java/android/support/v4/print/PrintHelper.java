@@ -18,8 +18,8 @@ package android.support.v4.print;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.Build;
 import android.net.Uri;
+import android.os.Build;
 
 import java.io.FileNotFoundException;
 

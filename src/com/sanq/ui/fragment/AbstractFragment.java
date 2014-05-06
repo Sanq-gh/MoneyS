@@ -65,6 +65,7 @@ public abstract class AbstractFragment extends Fragment {
         return res;
     }
 
+
     /**
      * Must be unique for all fragment
      */

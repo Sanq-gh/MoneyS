@@ -112,6 +112,7 @@ public class NavigateFragment extends AbstractFragment implements View.OnClickLi
     protected String getHeadCaption() {
         return context.getResources().getString(R.string.title_nav_faragment);
     }
+
     @Override
     protected int getHeadIcon() {
         return R.drawable._app_icon;

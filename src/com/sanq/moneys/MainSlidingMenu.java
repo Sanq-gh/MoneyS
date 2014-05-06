@@ -45,6 +45,7 @@ public class MainSlidingMenu extends BaseActivity implements CallbackFragment {
     @Override
     public void onResume() {
         super.onResume();
+
 //        int transCode=0;
 //        Bundle extras =  getView().getExtras();
 //        if (extras!=null){
@@ -67,7 +68,6 @@ public class MainSlidingMenu extends BaseActivity implements CallbackFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // creating default account by first time
         new Preferences(getAppContext()).getDefaultAcc();
 

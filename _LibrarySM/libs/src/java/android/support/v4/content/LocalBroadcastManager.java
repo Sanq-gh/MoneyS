@@ -16,10 +16,6 @@
 
 package android.support.v4.content;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Set;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -28,6 +24,10 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * Helper to register for and send broadcasts of Intents to local objects

@@ -12,6 +12,8 @@ import android.widget.*;
 import com.sanq.core.Report;
 import com.sanq.dao.AccountDAO;
 import com.sanq.entity.Account;
+import com.sanq.entity.Payord;
+import com.sanq.entity.Period;
 import com.sanq.loader.BackgroundLoader;
 import com.sanq.loader.BackgroundTask;
 import com.sanq.moneys.MainSlidingMenu;
@@ -23,6 +25,7 @@ import com.sanq.ui.dialog.ConfirmDialog;
 import com.sanq.ui.dialog.ConfirmDialogListener;
 import com.sanq.ui.dialog.DateDialog;
 import com.sanq.utils.Cnt;
+import com.sanq.utils.Preferences;
 import com.sanq.utils.Utils;
 import yuku.iconcontextmenu.IconContextMenu;
 
@@ -269,12 +272,29 @@ public class AccountFragment extends AbstractFragment implements View.OnClickLis
                 layButtonFew.setVisibility(View.GONE);
 //                layButtonOne.setVisibility(View.VISIBLE);
                 idContextMenu = R.menu.context_select;
-                listView.setOnItemClickListener(listenerOnItemClickListener);
+                listView.setOnItemClickListener(new ListView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Account clickedAcc = mAdapter.getAccount(position);
+                        selectAndPostBack(clickedAcc);
+                    }
+                });
                 break;
             default:
                 layButtonFew.setVisibility(View.VISIBLE);
 //                layButtonOne.setVisibility(View.GONE);
                 idContextMenu = R.menu.context_account;
+                listView.setOnItemClickListener(new ListView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Account clickedAcc = mAdapter.getAccount(position);
+                        PaylistFragment paylistFragment = new PaylistFragment();
+                        Preferences prefs = new Preferences(context);
+                        paylistFragment.filterParams = new FilterParams();
+                        paylistFragment.filterParams.initParams(clickedAcc, Period.calcSelectDateRange(context, prefs.getDefaultTypeReportPeriod()), Payord.Type.UNDEFINED);
+                        MainSlidingMenu.getInstance().switchContent(paylistFragment);
+                   }
+                });
                 break;
         }
     }
@@ -287,14 +307,17 @@ public class AccountFragment extends AbstractFragment implements View.OnClickLis
         return cal.getTime();
     }
 
+//
+//    ListView.OnItemClickListener listenerOnItemClickListener = new ListView.OnItemClickListener() {
+//        @Override
+//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//            Account clickedAcc = mAdapter.getAccount(position);
+//            selectAndPostBack(clickedAcc);
+//        }
+//    };
+//
+//
 
-    ListView.OnItemClickListener listenerOnItemClickListener = new ListView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Account clickedAcc = mAdapter.getAccount(position);
-            selectAndPostBack(clickedAcc);
-        }
-    };
 
 
     private void selectAndPostBack(Account clickedAcc) {

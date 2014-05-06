@@ -16,18 +16,10 @@
 
 package android.support.v4.net;
 
-import static android.net.ConnectivityManager.TYPE_BLUETOOTH;
-import static android.net.ConnectivityManager.TYPE_ETHERNET;
-import static android.net.ConnectivityManager.TYPE_MOBILE;
-import static android.net.ConnectivityManager.TYPE_MOBILE_DUN;
-import static android.net.ConnectivityManager.TYPE_MOBILE_HIPRI;
-import static android.net.ConnectivityManager.TYPE_MOBILE_MMS;
-import static android.net.ConnectivityManager.TYPE_MOBILE_SUPL;
-import static android.net.ConnectivityManager.TYPE_WIFI;
-import static android.net.ConnectivityManager.TYPE_WIMAX;
-
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+import static android.net.ConnectivityManager.*;
 
 /**
  * Implementation of ConnectivityManagerCompat that can use Honeycomb MR2 APIs.
