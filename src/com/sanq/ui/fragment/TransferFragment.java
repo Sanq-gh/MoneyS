@@ -28,6 +28,7 @@ import com.sanq.ui.dialog.ConfirmDialogListener;
 import com.sanq.ui.dialog.ShowPicDialog;
 import com.sanq.utils.Cnt;
 import com.sanq.utils.Preferences;
+import com.sanq.utils.SLog;
 import com.sanq.utils.Utils;
 import yuku.iconcontextmenu.IconContextMenu;
 
@@ -355,6 +356,7 @@ public class TransferFragment extends AbstractFragment implements View.OnClickLi
                     deleteOrigImage(lastCapturedPhotoId);
                     filterParams.getTransfer().setImageName(String.valueOf(mAdapter.getSelectedTransfer().getId()));
                     new TransferDAO(context).update(filterParams.getTransfer());
+                    SLog.e("ok 0 ");
                 } catch (IOException e) {
                     Utils.procMessage(context, getResources().getString(R.string.mes_trans_err_save_photo) + ": " + e.getMessage());
                 } catch (SavingException e) {
@@ -393,10 +395,8 @@ public class TransferFragment extends AbstractFragment implements View.OnClickLi
             } while (imageCursor.moveToNext());
 
         }
-        imageCursor.close();
+       // imageCursor.close(); //it's because - http://stackoverflow.com/questions/9696868/unable-to-resume-activity-error
     }
-
-
 }
 
 //   for saved state

@@ -44,7 +44,7 @@ public class MainSlidingMenu extends BaseActivity implements CallbackFragment {
 
     @Override
     public void onResume() {
-        super.onResume();
+          super.onResume();
 
 //        int transCode=0;
 //        Bundle extras =  getView().getExtras();
@@ -54,6 +54,7 @@ public class MainSlidingMenu extends BaseActivity implements CallbackFragment {
 //        }else {
 //            Log.d(Cnt.TAG," Bundle is null");
 //        }
+
     }
 
     @Override
