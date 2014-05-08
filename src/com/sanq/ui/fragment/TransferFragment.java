@@ -325,7 +325,7 @@ public class TransferFragment extends AbstractFragment implements View.OnClickLi
         Cursor imageCursor = getActivity().managedQuery(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, imageColumns, imageWhere, imageArguments, imageOrderBy);
         if (imageCursor.moveToFirst()) {
             int id = imageCursor.getInt(imageCursor.getColumnIndex(MediaStore.Images.Media._ID));
-            imageCursor.close();
+            //imageCursor.close();  //it's because - http://stackoverflow.com/questions/9696868/unable-to-resume-activity-error
             return id;
         } else {
             return 0;
